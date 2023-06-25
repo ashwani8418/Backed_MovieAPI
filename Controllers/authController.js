@@ -87,3 +87,42 @@ exports.protect = asyncErrorHandler(async function (req, res, next) {
   req.user = user;
   next();
 });
+
+exports.restrict = (role) => {
+  return (req, res, next) => {
+    if (req.user.role !== role) {
+      const error = new CustomError(
+        "You do not have permission to perform this action",
+        403
+      );
+      next(error);
+    }
+    next();
+  };
+};
+
+// for multiple role
+// exports.restrict = (...role) => {
+//   return (req, res, next) => {
+//     if (!role.includes(req.user.role)) {
+//       const error = new CustomError(
+//         "You do not have permission to perform this action",
+//         403
+//       );
+//       next(error);
+//     }
+//     next();
+//   };
+// };
+
+exports.forgotPassword = (req, res, next) =>{
+  // 1. Get the user based on posted email
+
+  
+  // 2. Generate a random reset token
+  // 3.Send the token back to the user email
+}
+
+exports.resetPassword = (req, res, next) =>{
+
+}
