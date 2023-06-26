@@ -19,4 +19,4 @@ A new movie document with name RoboCop has been created by MANOJJHA
 A new movie document with name Captain America: The Winter Soldier has been created by MANOJJHA
 A new movie document with name Behind the Candelabra has been created by MANOJJHA
 A new movie document with name The Dark Knight Rises has been created by MANOJJHA
-Query took 56 milliseconds to fetch the documents.
+Query took 56 milliseconds to fetch the documents.Query took 41 milliseconds to fetch the documents.Query took 56 milliseconds to fetch the documents.Query took 34 milliseconds to fetch the documents.
